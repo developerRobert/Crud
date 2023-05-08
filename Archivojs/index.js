@@ -43,7 +43,7 @@ window.addEventListener("DOMContentLoaded", () => {
     // console.log(buscarUsuario)
 
     if (buscarUsuario !== "") {
-      alert(" El documento ingresado ya existe. ");
+      mostrar(" El documento ingresado ya existe. ");
     } else {
       const objeto_user = {
         nombre: `${input_nombre.value.toLowerCase()}`,
@@ -70,7 +70,8 @@ window.addEventListener("DOMContentLoaded", () => {
   btn_guardar.addEventListener("click", (e) => {
     e.preventDefault();
     if (validar()) {
-      alert(" porfavor llene los campos ")
+      
+      mostrar(" porfavor llene los campos ")
     } else {
       agregarUsuario();
       coteinerform.reset();
@@ -134,9 +135,6 @@ window.addEventListener("DOMContentLoaded", () => {
 
   //__________________________________________________________________________________
   function eliminarUser(document_event) {
-    let mensaje = confirm(" Deseas eliminar este Usuario")
-
-    if (mensaje) {
       array_local = JSON.parse(localStorage.getItem("usuario"));
       for (let i = 0; i < array_local.length; i++) {
         if (array_local[i].documento === document_event) {
@@ -147,7 +145,7 @@ window.addEventListener("DOMContentLoaded", () => {
       admiLocastore();
       obtenerLocaStore(array_local);
       eventosbtn();
-    }
+    
   }
   //____________________________________________________________
 
@@ -189,6 +187,8 @@ window.addEventListener("DOMContentLoaded", () => {
       array_local[indexObjecto].correo = input_correo.value.toLowerCase();
       array_local[indexObjecto].edad = input_edad.value.toLowerCase();
       if (validar()) {
+
+
         alert("ups.... complete todo la informacion ")
       } else {
         admiLocastore();
@@ -236,9 +236,16 @@ window.addEventListener("DOMContentLoaded", () => {
 
       botones.addEventListener("click", (e) => {
         const id = e.currentTarget.id;
-        eliminarUser(id);
+        contener_modal.style.display="flex";
+        mensaje_modal.textContent="Desea eliminar este usuario ?"
+        crearBotonesModal();
+        const btn_aceptar=document.querySelector(".aceptar");
+        btn_aceptar.addEventListener("click",()=>{
+          eliminarUser(id);
+          contener_modal.style.display="none";
+        });
 
-      })
+      });
 
     }
 
@@ -269,27 +276,44 @@ window.addEventListener("DOMContentLoaded", () => {
 
   })
 
+  const contener_modal=document.querySelector(".contenedor_modal");
+  const mensaje_modal=document.querySelector(".modal_texto");
+  const cerrar_modal=document.querySelector(".cerrar");
+
+function mostrar (mensaje) {
+  container_botones.innerHTML="";
+  contener_modal.style.display="flex";
+  mensaje_modal.textContent=mensaje;
+  cerrar_modal.addEventListener("click",(e)=>{
+    contener_modal.style.display="none";
+
+  }) 
+}
+
+
+const container_botones=document.querySelector(".modal_btn");
+const boton_Cancelar=document.querySelector(".modal_btn");
+
+function crearBotonesModal() {
+  container_botones.innerHTML="";
+
+  container_botones.innerHTML=`
+  <button class="btns aceptar">Aceptar</button>
+  <button class="btns cancelar">Cancelar</button>
+  ` 
+  boton_Cancelar.addEventListener("click",(e)=>{
+    contener_modal.style.display="none";
+  })
+  cerrar_modal.addEventListener("click",(e)=>{
+    contener_modal.style.display="none";
+
+  }) 
+}
+// crearBotonesModal();
 
 
 
 
-
-
-
-  // function guardaLocasotre() {
-  //     const miObjecto={
-  //         nombre:"robert",
-  //         apellido:"morelo",
-  //         documeto:1234,
-  //         edad:25
-  //     }
-
-  //     let nombre="pedro;"
-
-  //     localStorage.setItem("nombre",JSON.stringify(miObjecto))
-  //     // localStorage.setItem("nombre", nombre)
-  // }
-  // guardaLocasotre();
 
 
 

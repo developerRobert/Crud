@@ -1,3 +1,9 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
 
 body{
     background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
@@ -33,7 +39,7 @@ body{
 }
 .conteiner_form{
     width: 360px;
-    height: 79%;
+    height: 505px;
     background: rgba(225, 225, 225, 0.3);
     box-shadow: 0 10px 20px black;
     border-radius: 10px;
@@ -71,9 +77,8 @@ body{
 }
 /* __________________________________________________________ */
 .conteiner_mostrar{
-     /* width: 780px;   */
      width: 60%;
-     height: 85%; 
+     height: 500px; 
 }
 .conteiner_cards{
     display: flex;
@@ -202,6 +207,82 @@ width: 60%;
     align-items: center;
     gap: 5px;
 }
+/*______________________________________________________ */
+.contenedor_modal{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.678);
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+.modal{
+    width: 40%;
+    height: 300px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: rgba(225, 225, 225, 0.644);
+    position: relative;
+}
+.cont_modal{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 85%;
+    margin-top: 20px;
+}
+
+.cerrar{
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    border: 1px solid black;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.modal_texto{
+    text-align: center;
+    /* width: 80%; */
+    margin: 20px;
+    font-size: 22px;
+}
+.modal_btn{
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+    width:80% ;
+    height:50px;
+    margin-top: 20px;
+    /* border: 1px solid black; */
+}
+.btns{
+    border: none;
+    width: 120px;
+    height: 40px;
+    border-radius: 6px;
+    font-size: 16px;
+}
+.aceptar:hover{
+    border: 2px solid blue;
+}
+.cancelar:hover{
+    border: 2px solid red;
+}
+
+
 
 /* media query */
 @media (max-width:1075px) {
@@ -226,7 +307,7 @@ width: 60%;
         height: 480px;
     }
     .conteiner_mostrar{
-         width: 90%;
+         width: 80%;
         height: 450px;  
         margin: 20px auto;
    }
@@ -256,6 +337,7 @@ width: 60%;
     }
     .conteiner_mostrar{
         width: 90%;
+        height: 460px;
    }
    .buscar{
     display: none;
@@ -289,7 +371,8 @@ width: 60%;
     }
     .conteiner_mostrar{
         width: 90%;
-        height:580px;
+        height:680px;
+         border: 0px;
    }
 
     
