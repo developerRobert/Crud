@@ -11,89 +11,104 @@
 </head>
 
 <body>
-    <div class="conteiner">
-
-        <form action="" class="conteiner_form">
+    
+        <div class="conteiner">
             <div class="conteiner_titulo">
-                <h1 class="titulo">Registro Personas</h1>
-                <!-- <h4 class="titulo"></h4> -->
+                <h1 class="title">Bienvenido CRUD </h1>
             </div>
-            <div class="formulario">
-                <label for="" class="conteiner_label">Nombre</label>
-                <input type="text" class="conteiner_input input_nombre" placeholder="ingrese su nombre">
-
-                <label for="" class="conteiner_label">Apellido</label>
-                <input type="text" class="conteiner_input input_apellido" placeholder="ingrese su apellido">
-
-                <label for="" class="conteiner_label">Documento</label>
-                <input type="number" class="conteiner_input input_documento" placeholder="ingrese su documento">
-
-                <label for="" class="conteiner_label">Correo</label>
-                <input type="email" class="conteiner_input input_correo" placeholder="ingrese su correo">
-
-                <label for="" class="conteiner_label">Edad</label>
-                <input type="number" class="conteiner_input input_edad" placeholder="ingrese su edad">
-
-                <button class="btn_guardar">Guardar</button>
-                <div class="btns_cta">
-                    <button class="btn_guardar btn_actualiza btn_ocultar">Actualizar</button>
-                    <button class="btn_guardar btn_cancelar btn_ocultar">Cancelar</button>
-                </div>
-               
-            </div>
-        </form>
-
-
-        <div class="conteiner_mostrar">
-            <div class="conteiner_header">
-                <h2 class="conteiner_card_titulo">Usuario Registrado: <span
-                        class="vista_titulo_contador vista_span"></span></h2>
-                <div class="buscador">
-                    <input type="search" class="conteiner_card_input" placeholder=" Buscar...">
-                    <figure class="buscar"></figure>
-                </div>
-            </div>
-            <div class="conteiner_cards">
-
-                <!-- <div class="card">
-                        <figure class="card_img"></figure>
-                        <h3 class="titulos  titulo_nombre">Nombre</h3>
-                        <p class="vista vista_nombre"></p>
-                        <h3 class="titulos   titulo_apellido">Apellido</h3>
-                        <p class="vista  vista_apellido"></p>
-                        <h3 class="titulos  titulo_documento">Documento</h3>
-                        <p class="vista  vista_documento"></p>
-                        <h3 class="titulos  titulo_edad">Edad</h3>
-                        <p class="vista vista_edad"></p>
-                        <div class="card_btn">
-                            <button class="botones actualizar">Actualizar</button>
-                            <button class="botones eliminar">Eliminar</button>
+            <div class="conte_childs">
+                <form action="" class="conteiner_form">
+                    <div class="conteiner_titulos">
+                        <h4 class="titulo_registro">Registro Personas</h4>
+                    </div>
+                    <div class="formulario">
+                        <div class="cont_formu">
+                            <label for="" class="conteiner_label">Nombre</label>
+                            <input type="text" class="conteiner_input input_nombre" placeholder="ingrese su nombre">
                         </div>
-                    </div> -->
+                        <div class="cont_formu">
+                            <label for="" class="conteiner_label">Apellido</label>
+                            <input type="text" class="conteiner_input input_apellido" placeholder="ingrese su apellido">
+                        </div>
+                        <div class="cont_formu"> 
+                            <label for="" class="conteiner_label">Documento</label>
+                            <input type="number" class="conteiner_input input_documento" placeholder="ingrese su documento">
+
+                        </div>
+                        
+                        <div class="cont_formu">
+                        <label for="" class="conteiner_label">Correo</label>
+                        <input type="email" class="conteiner_input input_correo" placeholder="ingrese su correo">
+                        </div>
+                        
+                        <div class="cont_formu">    
+                        <label for="" class="conteiner_label">Edad</label>
+                        <input type="number" class="conteiner_input input_edad" placeholder="ingrese su edad">
+                        </div>
+                        <div class="cont_btn_guardar">
+                            <button class="btn_guardar">Guardar</button>
+                        </div>
+                        <div class="btns_cta">
+                            <button class=" btns_general btn_actualiza btn_ocultar">Actualizar</button>
+                            <button class=" btns_general btn_cancelar btn_ocultar">Cancelar</button>
+                        </div>
+                       
+                    </div>
+                </form>
+        
+        
+                <div class="conteiner_mostrar">
+                    <div class="conteiner_header">
+                        <div class="cont_mostrar_titulo">
+                            <h2 class="conteiner_card_titulo">Usuario Registrado: <span
+                                class="vista_titulo_contador vista_span"></span></h2>
+                        </div>
+                        <div class="buscador">
+                            <input type="search" class="conteiner_card_input" placeholder=" Buscar...">
+                            <figure class="buscar"></figure>
+                        </div>
+                    </div>
+                    <div class="conteiner_cards">
+        
+                        <!-- <div class="card">
+                                <figure class="card_img"></figure>
+                                <h3 class="titulos  titulo_nombre">Nombre</h3>
+                                <p class="vista vista_nombre"></p>
+                                <h3 class="titulos   titulo_apellido">Apellido</h3>
+                                <p class="vista  vista_apellido"></p>
+                                <h3 class="titulos  titulo_documento">Documento</h3>
+                                <p class="vista  vista_documento"></p>
+                                <h3 class="titulos  titulo_edad">Edad</h3>
+                                <p class="vista vista_edad"></p>
+                                <div class="card_btn">
+                                    <button class="botones actualizar">Actualizar</button>
+                                    <button class="botones eliminar">Eliminar</button>
+                                </div>
+                            </div> -->
+                    </div>
+        
+                </div>
             </div>
 
+            </div>
 
+        
+    
+      
 
-
-
-
+        <div class="contenedor_modal">
+            <div class="modal">
+                <div class="cont_modal">
+                    <p class="cerrar">X</p>
+                    <h2 class="modal_texto"></h2>
+                </div>
+                <div class="modal_btn">
+                    <!-- <button class="btns aceptar">Aceptar</button>
+                    <button class="btns cancelar">Cancelar</button> -->
+                </div>
+            </div>
+    
         </div>
-    </div>
-
-    <div class="contenedor_modal">
-        <div class="modal">
-            <div class="cont_modal">
-                <p class="cerrar">X</p>
-                <h2 class="modal_texto"></h2>
-            </div>
-            <div class="modal_btn">
-                <!-- <button class="btns aceptar">Aceptar</button>
-                <button class="btns cancelar">Cancelar</button> -->
-            </div>
-        </div>
-
-    </div>
-
 </body>
 
 </html>

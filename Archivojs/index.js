@@ -101,15 +101,10 @@ window.addEventListener("DOMContentLoaded", () => {
       card.innerHTML =
         `
         <figure class="card_img"></figure>
-        <h3 class="titulos  titulo_nombre">Nombre</h3>
         <p class="vista vista_nombre">${array[i].nombre}</p>
-        <h3 class="titulos   titulo_apellido">Apellido</h3>
         <p class="vista  vista_apellido">${array[i].apellido}</p>
-        <h3 class="titulos  titulo_documento">Documento</h3>
         <p class="vista  vista_documento">${array[i].documento}</p>
-        <h3 class="titulos  titulo_correo">Correo</h3>
         <p class="vista  vista_correo">${array[i].correo}</p>
-        <h3 class="titulos  titulo_edad">Edad</h3>
         <p class="vista vista_edad">${array[i].edad}</p>
         <div class="card_btn">
             <button class="botones actualizar botonActualizar" id=${array_local[i].documento}>Actualizar</button>
