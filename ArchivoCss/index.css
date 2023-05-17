@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
+
 *{
     margin: 0px;
     padding: 0px;
@@ -5,6 +7,7 @@
 }
  :root{
     --bord:1px solid red;
+    --cursiva:'Cedarville Cursive', cursive;
  }
 
 body{
@@ -38,6 +41,7 @@ body{
     color: white;
     font-size: 50px;
     letter-spacing: 1px;
+    font-family:cursive ;
   
 }
 .conte_childs{
